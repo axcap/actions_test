@@ -2,7 +2,7 @@ name: .NET Core CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
   # Manual trigger using web interface (github.com)
   workflow_dispatch:
