@@ -1,0 +1,41 @@
+name: .NET Core CI
+
+on:
+  push:
+    branches: [ main ]
+
+  # Manual trigger using web interface (github.com)
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'
+
+env:
+  DOTNET_VERSION: '3.1.x'
+  
+  
+jobs:
+  codecov_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@main
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@main
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+      
+      - name: Codecov
+        # You may pin to the exact commit or the version.
+        # uses: codecov/codecov-action@6004246f47ab62d32be025ce173b241cd84ac58e
+        uses: codecov/codecov-action@v1.0.13
+        with:
+            name: Install dependencies
+            run: |
+                dotnet restore
+                dotnet build -warnaserror --configuration Release --no-restore
