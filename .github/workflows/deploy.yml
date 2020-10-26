@@ -1,0 +1,22 @@
+name: Deploy to Azure
+
+on:
+  push:
+    branches: main
+
+  workflow_dispatch:
+      inputs:
+        logLevel:
+          description: 'Log level'     
+          required: true
+          default: 'warning'
+        tags:
+          description: 'Test scenario tags'
+
+jobs:
+  Deploy_to_Azure:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy newly created container to Azure Web App
+      - run: echo "Deployed"
