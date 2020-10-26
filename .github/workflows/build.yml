@@ -1,7 +1,7 @@
-name: .NET Core CI
+name: Build
 
 on:
-  push:
+  pull_request:
     branches: [ master ]
 
   # Manual trigger using web interface (github.com)
