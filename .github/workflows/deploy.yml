@@ -1,8 +1,9 @@
-name: Deploy to Azure
+name: Deploy
 
 on:
   push:
-    branches: main
+    branches:
+      - main
 
   workflow_dispatch:
       inputs:
@@ -14,9 +15,9 @@ on:
           description: 'Test scenario tags'
 
 jobs:
-  Deploy_to_Azure:
+  Deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Deploy newly created container to Azure Web App
+      - name: Deploy
       - run: echo "Deployed"
