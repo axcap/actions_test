@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Akhsarbek Gozoev\\Downloads\\actions_test\\Demo\\Demo\\Demo.csproj": {}
+    "C:\\Users\\agozoev\\Downloads\\actions_test\\Demo\\Demo\\Demo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Akhsarbek Gozoev\\Downloads\\actions_test\\Demo\\Demo\\Demo.csproj": {
+    "C:\\Users\\agozoev\\Downloads\\actions_test\\Demo\\Demo\\Demo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Akhsarbek Gozoev\\Downloads\\actions_test\\Demo\\Demo\\Demo.csproj",
+        "projectUniqueName": "C:\\Users\\agozoev\\Downloads\\actions_test\\Demo\\Demo\\Demo.csproj",
         "projectName": "Demo",
-        "projectPath": "C:\\Users\\Akhsarbek Gozoev\\Downloads\\actions_test\\Demo\\Demo\\Demo.csproj",
-        "packagesPath": "C:\\Users\\Akhsarbek Gozoev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Akhsarbek Gozoev\\Downloads\\actions_test\\Demo\\Demo\\obj\\",
+        "projectPath": "C:\\Users\\agozoev\\Downloads\\actions_test\\Demo\\Demo\\Demo.csproj",
+        "packagesPath": "C:\\Users\\agozoev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\agozoev\\Downloads\\actions_test\\Demo\\Demo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Akhsarbek Gozoev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\agozoev\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
