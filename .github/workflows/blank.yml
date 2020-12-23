@@ -14,13 +14,13 @@ jobs:
     steps:
       - uses: nick-invision/persist-action-data@v1
         with:
-          data: ${{ steps.some-step.output.some-output }}
+          data: "yes"
           variable: SOME_STEP_OUTPUT
   
       - uses: nick-invision/persist-action-data@v1
         with:
           data: ${{ steps.some-step.output.some-output }}
-          retrieve_variables: SOME_STEP_OUTPUT, SOME_OTHER_STEP_OUTPUT
+          retrieve_variables: SOME_STEP_OUTPUT
       - run: echo $SOME_STEP_OUTPUT
         
   get-time:
