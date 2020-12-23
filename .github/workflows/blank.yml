@@ -21,6 +21,7 @@ jobs:
             return commit_details.data.author.date
   
   get-time:
+    needs: save-time
     runs-on: ubuntu-latest
     steps:
       - name: Display GitVersion outputs
