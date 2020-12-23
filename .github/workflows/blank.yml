@@ -12,16 +12,23 @@ jobs:
   save-time:
     runs-on: ubuntu-latest
     steps:
-      - name: Set outputs
-        id: vars
-        run: echo "::set-output name=production::true"
+      - uses: nick-invision/persist-action-data@v1
+        with:
+          data: ${{ steps.some-step.output.some-output }}
+          variable: SOME_STEP_OUTPUT
   
-      - name: Check outputs
-        run: echo ${{ steps.vars.outputs.production }}
+      - uses: nick-invision/persist-action-data@v1
+        with:
+          data: ${{ steps.some-step.output.some-output }}
+          retrieve_variables: SOME_STEP_OUTPUT, SOME_OTHER_STEP_OUTPUT
+      - run: echo $SOME_STEP_OUTPUT
         
   get-time:
     needs: save-time
     runs-on: ubuntu-latest
     steps:
-      - name: Check outputs v2
-        run: echo ${{ steps.vars.outputs.production }}
+     - uses: nick-invision/persist-action-data@v1
+       with:
+          data: ${{ steps.some-step.output.some-output }}
+          retrieve_variables: SOME_STEP_OUTPUT, SOME_OTHER_STEP_OUTPUT
+     - run: echo $SOME_STEP_OUTPUT
